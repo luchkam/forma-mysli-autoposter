@@ -4,8 +4,4 @@ Pillow>=10.3.0
 imagehash>=4.3.1
 python-dotenv>=1.0.1
 snscrape==0.7.0.20230622
-# OCR (можно отключить через env OCR=off)
-paddlepaddle==2.5.2
-paddleocr==2.7.0.3
-onnxruntime>=1.17.0
-shapely>=2.0.4
+openai>=1.30
