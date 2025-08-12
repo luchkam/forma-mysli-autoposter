@@ -112,7 +112,8 @@ def process_manual_inbox():
             ru = translate_meaning(text) if text else ""
             (post_dir/"caption_en.txt").write_text(text, encoding="utf-8")
             (post_dir/"caption_ru.txt").write_text(ru, encoding="utf-8")
-        except Exception:
+        except Exception as e:
+            print("translate error:", e)
             ru = ""
 
         try:
