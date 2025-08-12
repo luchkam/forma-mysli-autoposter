@@ -102,9 +102,12 @@ def process_manual_inbox():
         try:
             if has_text(str(img)):
                 print("manual skip (has text):", img)
-                seen_add(key); continue
-        except Exception:
-            pass
+                seen_add(key)
+                continue
+            else:
+                print("manual no-text:", img)
+        except Exception as e:
+            print("OCR error:", e)
 
         invert_image(img, inv_path)
 
